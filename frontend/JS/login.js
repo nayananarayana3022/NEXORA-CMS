@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/api/users/login";
+const API_URL = "https://nexora-cms-api-me1j.onrender.com/api/users/login";
 
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
 

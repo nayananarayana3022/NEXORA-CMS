@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/api/movies";
+const API_URL = "https://nexora-cms-api-me1j.onrender.com/api/movies";
 const token = localStorage.getItem("token");
 
 // Get logged-in user's role from JWT

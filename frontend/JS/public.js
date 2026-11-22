@@ -1,6 +1,6 @@
 
-const MOVIE_API = "http://localhost:8080/api/public/movies";
-const ARTICLE_API = "http://localhost:8080/api/public/articles";
+const MOVIE_API = "https://nexora-cms-api-me1j.onrender.com/api/public/movies";
+const ARTICLE_API = "https://nexora-cms-api-me1j.onrender.com/api/public/articles";
 
 
 // Load published movies

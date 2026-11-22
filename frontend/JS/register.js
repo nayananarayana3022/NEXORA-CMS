@@ -1,5 +1,5 @@
 
-const REGISTER_API = "http://localhost:8080/api/users/register";
+const REGISTER_API = "https://nexora-cms-api-me1j.onrender.com/api/users/register";
 
 document.getElementById("registerForm").addEventListener(
     "submit",

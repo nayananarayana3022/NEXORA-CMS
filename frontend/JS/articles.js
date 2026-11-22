@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/api/articles";
+const API_URL = "https://nexora-cms-api-me1j.onrender.com/api/articles";
 
 const token = localStorage.getItem("token");
 

@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/api/dashboard/statistics";
+const API_URL = "https://nexora-cms-api-me1j.onrender.com/api/dashboard/statistics";
 
 // Get JWT token from browser storage
 const token = localStorage.getItem("token");
