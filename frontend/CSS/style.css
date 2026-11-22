@@ -1,0 +1,503 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5fb;
+}
+
+.login-container {
+    background: #f4f5fb;
+}
+
+.brand-section {
+    background: linear-gradient(135deg, #171638, #38306d);
+    color: white;
+    padding: 40px;
+}
+
+.brand-name {
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.brand-section p {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.login-card {
+    width: 85%;
+    max-width: 420px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h2 {
+    color: #222044;
+    font-weight: bold;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.login-btn {
+    background: #38306d;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.login-btn:hover {
+    background: #171638;
+    color: white;
+}
+
+a {
+    color: #38306d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== NEXORA DASHBOARD ===== */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f5fb;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #171638, #38306d);
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.sidebar-tagline {
+    color: #c7c4e5;
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    color: #e4e2f5;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: normal;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #6259a0;
+    color: white;
+    text-decoration: none;
+}
+
+/* Logout Button */
+
+.logout-btn {
+    margin-top: auto;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #b02a37;
+}
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.dashboard-header h1 {
+    color: #222044;
+    font-weight: bold;
+}
+
+.dashboard-header p {
+    color: #777;
+}
+
+/* Statistics Cards */
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #38306d;
+}
+
+.stat-card h6 {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.stat-card h2 {
+    color: #222044;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Welcome Card */
+
+.welcome-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-card h3 {
+    color: #222044;
+    font-weight: bold;
+}
+
+.welcome-card p {
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar nav {
+        gap: 5px;
+    }
+
+    .logout-btn {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+/* ===== MOVIES MANAGEMENT PAGE ===== */
+
+#movieFormContainer {
+    border-top: 4px solid #38306d;
+}
+
+#movieFormContainer h3,
+.welcome-card h3 {
+    color: #222044;
+    font-weight: bold;
+}
+
+#movieForm .form-label {
+    font-weight: 600;
+    color: #38306d;
+}
+
+#movieForm .form-control {
+    border: 1px solid #ddd;
+}
+
+#movieForm .form-control:focus {
+    border-color: #38306d;
+    box-shadow: 0 0 5px rgba(56, 48, 109, 0.2);
+}
+
+.table {
+    vertical-align: middle;
+}
+
+.table thead th {
+    background: #38306d;
+    color: white;
+    white-space: nowrap;
+}
+
+.table tbody tr:hover {
+    background: #f4f5fb;
+}
+
+.table td {
+    white-space: nowrap;
+}
+
+.action-btn {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: #222;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+.submit-btn {
+    background: #0d6efd;
+    color: white;
+    margin: 2px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ===== NEXORA CINEMATIC HERO ===== */
+
+.nexora-hero {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 9, 20, 0.96) 0%,
+            rgba(8, 9, 20, 0.78) 48%,
+            rgba(8, 9, 20, 0.25) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(8, 9, 20, 0.8),
+            transparent 45%
+        ),
+        url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    animation: heroFadeIn 1s ease;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #b6a5ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 800;
+    line-height: 1.12;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: #d1d1da;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 580px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 32px;
+}
+
+.hero-primary-btn {
+    background: #7661d8;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 7px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-primary-btn:hover {
+    background: #9582f5;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.hero-secondary-btn {
+    border: 1px solid rgba(255,255,255,0.7);
+    color: white;
+    padding: 13px 30px;
+    border-radius: 7px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-secondary-btn:hover {
+    background: white;
+    color: #171638;
+}
+
+.hero-tagline {
+    margin-top: 45px;
+    color: #aaa6c5;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== NEXORA PREMIUM BUTTONS ===== */
+
+.btn {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 23px;
+    font-size: 14px;
+    font-weight: 650;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Primary Purple Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #9061ff, #6735d5);
+    color: #ffffff;
+    box-shadow: 0 5px 18px rgba(121, 75, 230, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #a782ff, #8051eb);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(121, 75, 230, 0.5);
+}
+
+/* Success Buttons */
+.btn-success {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.btn-success:hover {
+    background: #047857;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Danger Buttons */
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Secondary Buttons */
+.btn-secondary {
+    background: #29263a;
+    color: #eee8ff;
+    border: 1px solid #49415f;
+}
+
+.btn-secondary:hover {
+    background: #40345f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+    border: 1px solid #9061ff;
+    color: #a989ff;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: #8051eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Keyboard Focus */
+.btn:focus-visible {
+    outline: 3px solid rgba(167, 130, 255, 0.5);
+    outline-offset: 3px;
+}
+
+/* Disabled Buttons */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+}

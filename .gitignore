@@ -1,0 +1,26 @@
+
+# Java / Maven
+backend/target/
+*.log
+
+# Eclipse
+.metadata/
+.settings/
+.classpath
+.project
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Node dependencies
+frontend/node_modules/
+
+# Windows files
+Thumbs.db
+
+# Protect database credentials
+backend/src/main/resources/application.properties

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Movies</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2 class="sidebar-logo">NEXORA</h2>
+            <p class="sidebar-tagline">Entertainment CMS</p>
+
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="movies.html" class="active">Movies</a>
+                <a href="articles.html">Articles</a>
+                <a href="public.html">Public Website</a>
+            </nav>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="dashboard-header">
+                <h1>Movies Management</h1>
+                <p>Manage your entertainment movie content.</p>
+            </div>
+
+            <!-- Add Movie Button -->
+            <div class="mt-4 mb-4">
+                <button class="btn btn-primary" onclick="showAddMovieForm()">
+                    + Add New Movie
+                </button>
+            </div>
+
+            <!-- Search -->
+            <div class="mb-4">
+                <input type="text"
+                       id="searchMovie"
+                       class="form-control"
+                       placeholder="Search movies by title...">
+
+                <button class="btn btn-dark mt-2" onclick="searchMovies()">
+                    Search
+                </button>
+
+                <button class="btn btn-secondary mt-2" onclick="loadMovies()">
+                    Show All
+                </button>
+            </div>
+
+            <!-- Add Movie Form -->
+            <div id="movieFormContainer" class="welcome-card mb-4" style="display:none;">
+
+                <h3 id="formTitle">Add New Movie</h3>
+
+                <form id="movieForm">
+
+                    <input type="hidden" id="movieId">
+
+                    <div class="mb-3">
+                        <label class="form-label">Movie Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Genre</label>
+                        <input type="text" id="genre" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Release Date</label>
+                        <input type="date" id="releaseDate" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Description</label>
+                        <textarea id="description" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Poster URL</label>
+                        <input type="url" id="posterUrl" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Trailer URL</label>
+                        <input type="url" id="trailerUrl" class="form-control">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        Save Movie
+                    </button>
+
+                    <button type="button" class="btn btn-secondary" onclick="hideMovieForm()">
+                        Cancel
+                    </button>
+
+                </form>
+
+                <p id="movieMessage" class="mt-3"></p>
+
+            </div>
+
+            <!-- Movie Table -->
+            <div class="welcome-card">
+
+                <h3 class="mb-3">Movie List</h3>
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Genre</th>
+                                <th>Release Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="movieTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p id="tableMessage"></p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="js/movies.js"></script>
+
+</body>
+</html>

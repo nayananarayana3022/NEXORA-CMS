@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA - Articles Management</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">NEXORA</div>
+        <p class="sidebar-tagline">Create. Manage. Publish. Discover.</p>
+
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="movies.html">Movies</a>
+            <a href="articles.html" class="active">Articles</a>
+            <a href="public.html">Public Website</a>
+        </nav>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <div class="dashboard-header mb-4">
+            <h1>Articles Management</h1>
+            <p>Create, manage and publish entertainment articles.</p>
+        </div>
+
+        <!-- Add Article Button -->
+        <div class="mb-4">
+            <button class="btn btn-primary"
+                    onclick="showAddArticleForm()">
+                + Add New Article
+            </button>
+        </div>
+
+        <!-- Search -->
+        <div class="row mb-4">
+            <div class="col-md-5 mb-2">
+                <input type="text"
+                       id="searchArticle"
+                       class="form-control"
+                       placeholder="Search article by title">
+            </div>
+
+            <div class="col-md-3 mb-2">
+                <button class="btn btn-primary w-100"
+                        onclick="searchArticles()">
+                    Search
+                </button>
+            </div>
+
+            <div class="col-md-3 mb-2">
+                <button class="btn btn-secondary w-100"
+                        onclick="loadArticles()">
+                    Show All
+                </button>
+            </div>
+        </div>
+
+        <!-- Article Form -->
+        <div id="articleFormContainer"
+             class="card p-4 mb-4"
+             style="display:none;">
+
+            <h3 id="formHeading">Add New Article</h3>
+
+            <form id="articleForm">
+
+                <input type="hidden" id="articleId">
+
+                <div class="mb-3">
+                    <label class="form-label">Article Title</label>
+                    <input type="text"
+                           id="title"
+                           class="form-control"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+                    <input type="text"
+                           id="category"
+                           class="form-control"
+                           placeholder="Entertainment, Reviews, News..."
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Author Name</label>
+                    <input type="text"
+                           id="author"
+                           class="form-control"
+                           required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Article Content</label>
+                    <textarea id="content"
+                              class="form-control"
+                              rows="5"
+                              required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Image URL</label>
+                    <input type="url"
+                           id="imageUrl"
+                           class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    Save Article
+                </button>
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        onclick="hideArticleForm()">
+                    Cancel
+                </button>
+
+            </form>
+        </div>
+
+        <!-- Article Table -->
+        <div class="card p-4">
+
+            <h3 class="mb-3">Article List</h3>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Author</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="articleTableBody"></tbody>
+                </table>
+            </div>
+
+            <p id="tableMessage"></p>
+
+        </div>
+
+    </main>
+</div>
+
+<script src="js/articles.js"></script>
+
+</body>
+</html>
